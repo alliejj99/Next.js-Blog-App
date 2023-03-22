@@ -44,13 +44,11 @@ ___
 
   Next.JS는 모든 페이지를 pre-render합니다. 이 pre-render한다는 의미는 모든 페이지를 위한 HTML을 Client 사이드에서 자바스크립트로 처리하기 전, “사전에” 생성한다는 것입니다. 이렇게 하기 때문에 SEO 검색엔진 최적화가 좋아집니다.
 
-  ![image](https://user-images.githubusercontent.com/118407356/226944423-6b5a8d3e-14ab-4e06-bb9c-c92da01b9f40.png)
-
-  ![image](https://user-images.githubusercontent.com/118407356/226944316-4a6402cd-5ebf-4976-a9dc-86405fa01299.png)
+  <img width="527" alt="image" src="https://user-images.githubusercontent.com/118407356/226950984-3e92cbda-8d9a-49f4-96b5-a68f88fb3d7a.png">
 
 ___
 
-**Data Fetching**
+- **Data Fetching**
 
   Next.JS에서 데이터를 가져오는 방법은 여러가지가 있습니다. 그래서 애플리케이션의 사용 용도에 따라서 다른 방법을 사용해주면 됩니다.
 
