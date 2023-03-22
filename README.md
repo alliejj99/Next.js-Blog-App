@@ -13,6 +13,7 @@ yarn create next-app --typescript
 - **기본 파일 구조**
   ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b10959ed-2338-4f37-92af-8dcb460458cd/Untitled.png)
 
+
   **pages 폴더**
   - 이 폴더 안에 페이지들을 생성 합니다.  
 
