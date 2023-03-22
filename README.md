@@ -58,6 +58,7 @@ ___
 | getStaticProps | Static Generation으로 빌드(build)할 때 데이터를 불러옵니다.( 미리 만들어줌 ) |
 | getStaticPaths | Static Generation으로 데이터에 기반하여 pre-render시 특정한 라우팅을 구현합니다. (pages/post/[id].js) |
 | getServerSidePages | Server Side Rendering으로 요청이 있을 때 데이터를 불러옵니다. |
+  
 - **getStaticProps 사용해야 할 때**
   - 페이지를 렌더링하는 데 필요한 데이터를 사용자의 요청보다 먼저 build 시간에 필요한 데이터를 가져올때.
   - 데이터는 Headiress CMS에서 데이터를 가져올 때.
