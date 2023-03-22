@@ -47,3 +47,30 @@ ___
   ![image](https://user-images.githubusercontent.com/118407356/226944423-6b5a8d3e-14ab-4e06-bb9c-c92da01b9f40.png)
 
   ![image](https://user-images.githubusercontent.com/118407356/226944316-4a6402cd-5ebf-4976-a9dc-86405fa01299.png)
+
+___
+
+**Data Fetching**
+
+  Next.JS에서 데이터를 가져오는 방법은 여러가지가 있습니다. 그래서 애플리케이션의 사용 용도에 따라서 다른 방법을 사용해주면 됩니다.
+
+  보통 리액트에서는 데이터를 가져올 때 useEffect Hooks안에서 가져옵니다. 하지만 Next.JS에서는 다른 방법을 통해 가져오는 방식들이 있습니다.
+
+  | getStaticProps | Static Generation으로 빌드(build)할 때 데이터를 불러옵니다.( 미리 만들어줌 ) |
+  | --- | --- |
+  | getStaticPaths | Static Generation으로 데이터에 기반하여 pre-render시 특정한 라우팅을 구현합니다. (pages/post/[id].js) |
+  | getServerSidePages | Server Side Rendering으로 요청이 있을 때 데이터를 불러옵니다. |
+
+- **getStaticProps 사용해야 할 때**
+  - 페이지를 렌더링하는 데 필요한 데이터를 사용자의 요청보다 먼저 build 시간에 필요한 데이터를 가져올때.
+  - 데이터는 Headiress CMS에서 데이터를 가져올 때.
+  - 데이터를 공개적으로 캐시할 수 있을때
+  - 페이지는 미리 렌더링 되어야하고 매우 빨라야 할때
+
+- **getStaticPaths 사용 해야 할 때**
+  - 동적 라우팅이 필요할 때 getStaticPaths로 경로 리스트를 정의하고, HTML에 Build 시간에 렌더 됩니다.
+  - Next.JS는 pre-render에서 정적으로 getStaticPaths에서 호출하는 경로들을 가져옵니다.
+
+- **getServerSidePages 사용해야 할 때**
+
+  - 요청할 때 데이터를가져와야 하는페이지를 미리 렌더해야 할 때 사용합니다. 서버가 모든 요청에 대한 결과를 계산하고, 추가 구성없이 CND에 의해 결과를 캐시할 수 없기 때문에 첫 번째 바이트까지의 시간은 getStaticProps보다 느립니다.
