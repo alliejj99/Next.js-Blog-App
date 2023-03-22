@@ -10,7 +10,7 @@ npx create-next-app@latest --typescript
 yarn create next-app --typescript
 ```
 
-- **기본 파일 구조**
+- **기본 파일 구조**  
  ![image](https://user-images.githubusercontent.com/118407356/226940104-6cb7e814-4e4e-4ce1-b631-0f3ca74cb2ba.png)
 
 
