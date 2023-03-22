@@ -11,6 +11,7 @@ yarn create next-app --typescript
 ```
 
 - **기본 파일 구조**  
+    
   ![image](https://user-images.githubusercontent.com/118407356/226940104-6cb7e814-4e4e-4ce1-b631-0f3ca74cb2ba.png)
 
 
@@ -42,6 +43,6 @@ yarn create next-app --typescript
 
   Next.JS는 모든 페이지를 pre-render합니다. 이 pre-render한다는 의미는 모든 페이지를 위한 HTML을 Client 사이드에서 자바스크립트로 처리하기 전, “사전에” 생성한다는 것입니다. 이렇게 하기 때문에 SEO 검색엔진 최적화가 좋아집니다.
 
-  ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3f3d4082-9b40-4ef6-96c2-268e985e225c/Untitled.png)
+  ![image](https://user-images.githubusercontent.com/118407356/226944423-6b5a8d3e-14ab-4e06-bb9c-c92da01b9f40.png)
 
-  ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7d825d04-82ff-4ddb-917a-12b9dbaab6b7/Untitled.png)
+  ![image](https://user-images.githubusercontent.com/118407356/226944316-4a6402cd-5ebf-4976-a9dc-86405fa01299.png)
