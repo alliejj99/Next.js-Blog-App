@@ -11,7 +11,7 @@ yarn create next-app --typescript
 ```
 
 - **기본 파일 구조**
-  ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b10959ed-2338-4f37-92af-8dcb460458cd/Untitled.png)
+ ![image](https://user-images.githubusercontent.com/118407356/226940104-6cb7e814-4e4e-4ce1-b631-0f3ca74cb2ba.png)
 
 
   **pages 폴더**
