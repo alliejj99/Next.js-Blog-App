@@ -1,38 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+#### Next.js Blog App
+  Next.JS로 만들어 보는 블로그 앱입니다.  
 
-## Getting Started
-
-First, run the development server:
-
+- **설치 방법**
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+npx create-next-app@latest
+yarn create next-app
+
+npx create-next-app@latest --typescript
+yarn create next-app --typescript
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **기본 파일 구조**
+  ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b10959ed-2338-4f37-92af-8dcb460458cd/Untitled.png)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+  **pages 폴더**
+  - 이 폴더 안에 페이지들을 생성 합니다.  
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+  - inxex.tsx가 처음 “/”페이지로 설정됩니다.  
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+  - _app.tsx는 공통되는 레이아웃을 작성합니다. 모든 파에지에 공통으로 들어가는 것을 넣을때 사용하면 됩니다. (url을 통해 특정 페이지에 진입하기 전 통과하는 인터셉터 페이지 입니다.)  
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+  - 만약 about이라는 페이지를 만들려면 pages 폴더 안에 about.tsx를 생성해 주세요.  
 
-## Learn More
+  **public 폴더**
+  - 이미지와 같은 정적(static) 에셋들을 보관합니다.  
 
-To learn more about Next.js, take a look at the following resources:
+  **styles 폴더**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+  - 스타일링을 처리하는 폴더입니다.  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+  - 모듈 css는 컴포넌트 종속적으로 스타일링하기 위한 것이며, 확장자 옆에 module을 붙여줘야 합니다.  
 
-## Deploy on Vercel
+  **next.config.js**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+  - Next JS는 웹팩을 기본 번들러로 사용합니다. 그래서 웹팩에 관한 설정들을 이 파일에서 처합니다.
