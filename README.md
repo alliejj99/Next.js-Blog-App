@@ -9,6 +9,7 @@ yarn create next-app
 npx create-next-app@latest --typescript
 yarn create next-app --typescript
 ```
+___
 
 - **기본 파일 구조**  
   ![image](https://user-images.githubusercontent.com/118407356/226940104-6cb7e814-4e4e-4ce1-b631-0f3ca74cb2ba.png)
@@ -36,9 +37,9 @@ yarn create next-app --typescript
 
   - Next JS는 웹팩을 기본 번들러로 사용합니다. 그래서 웹팩에 관한 설정들을 이 파일에서 처합니다.
 
----
+___
 
-**Pre-Rendering**
+- **Pre-Rendering**
 
   Next.JS는 모든 페이지를 pre-render합니다. 이 pre-render한다는 의미는 모든 페이지를 위한 HTML을 Client 사이드에서 자바스크립트로 처리하기 전, “사전에” 생성한다는 것입니다. 이렇게 하기 때문에 SEO 검색엔진 최적화가 좋아집니다.
 
