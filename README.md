@@ -1,6 +1,8 @@
 #### Next.js Blog App
   Next.JS로 만들어 보는 블로그 앱입니다.  
 
+- [TypeScript](https://languid-argon-8f2.notion.site/TypeScript-7977c52d051043c5b3b6d47a1724f86c)
+
 - **설치 방법**
 ```bash
 npx create-next-app@latest
