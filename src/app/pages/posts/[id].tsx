@@ -18,7 +18,7 @@ const Post = ({
   };
 }) => {
   return (
-    <div>
+    <div className={homeStyles.container}>
       <Head>
         <title>{postData.title}</title>
       </Head>
