@@ -1,5 +1,6 @@
 #### Next.js Blog App
   Next.JS로 만들어 보는 블로그 앱입니다.  
+  <img width="388" alt="image" src="https://user-images.githubusercontent.com/118407356/228573176-afc401c1-56eb-4ba0-b669-09bae8e51251.png">
 
 - [TypeScript](https://languid-argon-8f2.notion.site/TypeScript-7977c52d051043c5b3b6d47a1724f86c)
 
