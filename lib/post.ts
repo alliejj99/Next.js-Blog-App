@@ -20,7 +20,7 @@ export function getSortedPostsData() {
 
     return {
       id,
-      ...allPostsData(metterResult.data as { date: string; title: string }),
+      ...(metterResult.data as { date: string; title: string }),
     };
   });
 
@@ -30,6 +30,7 @@ export function getSortedPostsData() {
       return 1;
     } else {
       return -1;
+      ``;
     }
   });
 }
