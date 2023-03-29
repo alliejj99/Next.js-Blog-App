@@ -73,3 +73,55 @@ ___
 - **getServerSidePages 사용해야 할 때**
 
   - 요청할 때 데이터를가져와야 하는페이지를 미리 렌더해야 할 때 사용합니다. 서버가 모든 요청에 대한 결과를 계산하고, 추가 구성없이 CND에 의해 결과를 캐시할 수 없기 때문에 첫 번째 바이트까지의 시간은 getStaticProps보다 느립니다.
+
+---
+- **Type Assertion**
+  TypeScript에서는 시스템이 추론 및 분석한 타입 내용을 우리가 원하는 대로 얼마든지 바꿀 수 있습니다 이때 “타입표명(Type Assertion)”이라 불리는 메커니즘이 사용됩니다. TypeScript의 타입표명은 프로그래머가 컴파일러에게 내가 너보다 타입에 더 잘 알고 있고, 나의 주장에 대해 의심하지 말라는 의미입니다.
+
+  Type Assertion을 사용하면 값의 type을 설정하고 컴파일러에 이를 유추하지 않도록 지시할 수 있습니다. 이것은 프로그래머로서 TypeScript가 자체적으로 추론할 수 있는 것보다 변수 유형에 대해 더 잘 이해하고 있을 때입니다.
+
+  ```tsx
+  // lib/post.ts
+  import fs from "fs";
+  import path from "path";
+  import matter from "gray-matter";
+
+  const postsDirectory = path.join(process.cwd(), "posts");
+
+  export function getSortedPostsData() {
+    // ./poosts 파일 이름 추적
+
+    const fileNames = fs.readdirSync(postsDirectory);
+    // ['pre-rendering.md', ...]
+
+    const allPostsData = fileNames.map((fileName) => {
+      const id = fileName.replace(/\.md$/, ""); // 불러올때 확장자 .md 생략
+
+      const fullPath = path.join(postsDirectory, fileName);
+      const fileContents = fs.readFileSync(fullPath, "utf-8"); // 인코딩
+
+      const metterResult = matter(fileContents);
+
+      return {
+        id,
+        ...allPostsData(metterResult.data as { date: string; title: string }),
+      };
+    });
+
+    // Sort 정렬
+    return allPostsData.sort((a, b) => {
+      if (a.date < b.date) {
+        return 1;
+      } else {
+        return -1;
+      }
+    });
+  }
+
+  ```
+
+  <aside>
+  💡 **as Foo, <Foo>**
+  타입표명은 위의 두가지 방식으로 표현할 수 있습니다. 하지만 리액트를 사용할 때는<Foo>키워드가 JSX의 문법과 겹치기 때문에 as Foo를 공통적으로 사용하는 것을 추천합니다.
+
+  </aside>
