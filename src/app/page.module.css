@@ -10,8 +10,14 @@
 .padding1px {
   padding-top: 1px;
 }
-.list {
-}
 .textBold {
   font-weight: bold;
+}
+.list {
+}
+.listItem {
+  margin: 0 0 1.25rem;
+}
+.lightText {
+  color: #666;
 }
