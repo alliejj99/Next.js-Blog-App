@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import homeStyles from "./page.module.css";
-import MainPage from "./pages/posts";
+import MainPage from "./pages";
 
 const inter = Inter({ subsets: ["latin"] });
 
