@@ -1,6 +1,7 @@
 import homeStyles from "../page.module.css";
 import { getSortedPostsData } from "../../../lib/post";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 // export const getStaticProps: GetStaticProps = async () => {
 //   const allPostsData = getSortedPostsData();

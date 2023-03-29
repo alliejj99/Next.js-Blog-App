@@ -125,3 +125,11 @@ ___
   타입표명은 위의 두가지 방식으로 표현할 수 있습니다. 하지만 리액트를 사용할 때는<Foo>키워드가 JSX의 문법과 겹치기 때문에 as Foo를 공통적으로 사용하는 것을 추천합니다.
 
   </aside>
+
+
+---
+#### npm installs
+```bash
+$ npm install gray-matter --save
+$ npm install remark remark-html --save
+```
